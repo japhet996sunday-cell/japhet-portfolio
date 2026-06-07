@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Japhet Sunday — Frontend Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=DM+Mono:wght@300;400;500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== CURSOR ===== -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">JS<span class="gold">.</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="home">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-container">
+      <div class="hero-content">
+        <p class="hero-eyebrow reveal">Available for Work</p>
+        <h1 class="hero-name reveal">Japhet<br /><span class="hero-name-gold">Sunday</span></h1>
+        <div class="hero-title reveal">
+          <span class="hero-title-label">— </span>
+          <span id="typingText" class="typing-text">Frontend Developer</span>
+          <span class="cursor-blink">|</span>
+        </div>
+        <p class="hero-tagline reveal">Building responsive web applications<br />with HTML, CSS, and JavaScript.</p>
+        <div class="hero-actions reveal">
+          <a href="#projects" class="btn btn-gold">View Projects</a>
+          <a href="japhet-sunday-cv.pdf" download class="btn btn-outline">Download CV</a>
+          <a href="#contact" class="btn btn-ghost">Contact Me</a>
+        </div>
+        <div class="hero-social reveal">
+          <a href="https://github.com/japhet996sunday-cell" target="_blank" class="social-icon" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.165 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.604-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.004.07 1.532 1.031 1.532 1.031.892 1.529 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.268 2.75 1.026A9.578 9.578 0 0112 6.836a9.59 9.59 0 012.504.337c1.909-1.294 2.748-1.026 2.748-1.026.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.337 4.687-4.565 4.935.359.309.678.919.678 1.852 0 1.337-.012 2.415-.012 2.741 0 .267.18.579.688.481C19.138 20.161 22 16.416 22 12c0-5.523-4.477-10-10-10z"/></svg>
+          </a>
+          <a href="mailto:japhet996sunday@gmail.com" class="social-icon" aria-label="Email">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          </a>
+          <a href="https://wa.me/2349070065083" target="_blank" class="social-icon" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="hero-avatar reveal">
+        <div class="avatar-frame">
+          <div class="avatar-placeholder">
+            <span class="avatar-initials">JS</span>
+            <div class="avatar-code">
+              <span>&lt;dev /&gt;</span>
+            </div>
+          </div>
+          <div class="avatar-deco deco-1"></div>
+          <div class="avatar-deco deco-2"></div>
+          <div class="avatar-badge">
+            <span>&#x2714; Open to Work</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <div class="scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="section about" id="about">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">01 / About</span>
+        <h2 class="section-title">The Story<br /><em>Behind the Code</em></h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p>I am a Frontend Developer passionate about building responsive and interactive web applications. I started learning web development to transform ideas into real digital products that solve problems and improve user experiences.</p>
+          <p>I enjoy building AI-powered tools, productivity dashboards, and user-friendly interfaces using HTML, CSS, and JavaScript. My goal is to secure internship and junior developer opportunities while growing into a full-stack developer.</p>
+          <div class="about-details">
+            <div class="detail-item">
+              <span class="detail-label">Location</span>
+              <span class="detail-value">Abuja, Nigeria</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">Email</span>
+              <span class="detail-value">japhet996sunday@gmail.com</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">Education</span>
+              <span class="detail-value">HND Mass Comm, Lens Polytechnic</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-label">Training</span>
+              <span class="detail-value">DCH Academy, 2026</span>
+            </div>
+          </div>
+        </div>
+        <div class="cv-card reveal">
+          <div class="cv-card-header">
+            <span class="cv-tag">Curriculum Vitae</span>
+            <h3>Japhet Sunday</h3>
+            <p class="cv-subtitle">Frontend Developer · Abuja, Nigeria</p>
+          </div>
+          <div class="cv-section">
+            <h4>Technical Skills</h4>
+            <p>HTML · CSS · JavaScript · Responsive Design · Git · GitHub · VS Code · API Integration · JSON · LocalStorage · Debugging</p>
+          </div>
+          <div class="cv-section">
+            <h4>Experience</h4>
+            <p><strong>HTML &amp; CSS Tutor</strong> (Independent) — May 2026 – Present</p>
+            <ul>
+              <li>Teach HTML and CSS to beginners</li>
+              <li>Guide responsive web design practice</li>
+              <li>Provide hands-on coding support</li>
+            </ul>
+          </div>
+          <div class="cv-section">
+            <h4>Education &amp; Training</h4>
+            <p>HND Mass Communication — Lens Polytechnic (2023)</p>
+            <p>Web Development — Darl Creative Hub Academy (Mar–Jul 2026)</p>
+          </div>
+          <div class="cv-section">
+            <h4>Projects</h4>
+            <p>Smart Study Dashboard · NovaChatAI App · Scientific Calculator</p>
+          </div>
+          <a href="japhet-sunday-cv.pdf" download class="btn btn-gold cv-download-btn">Download Full CV (PDF)</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <section class="section skills" id="skills">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">02 / Skills</span>
+        <h2 class="section-title">Tools of the<br /><em>Trade</em></h2>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-category reveal">
+          <h3 class="skill-cat-title">Frontend</h3>
+          <div class="skill-list">
+            <div class="skill-item" data-skill="HTML5">
+              <div class="skill-icon">&#x3c;/&#x3e;</div>
+              <span>HTML5</span>
+              <div class="skill-bar"><div class="skill-fill" style="--w:95%"></div></div>
+            </div>
+            <div class="skill-item" data-skill="CSS3">
+              <div class="skill-icon">&#x7b;&#x7d;</div>
+              <span>CSS3</span>
+              <div class="skill-bar"><div class="skill-fill" style="--w:90%"></div></div>
+            </div>
+            <div class="skill-item" data-skill="JavaScript">
+              <div class="skill-icon">JS</div>
+              <span>JavaScript</span>
+              <div class="skill-bar"><div class="skill-fill" style="--w:82%"></div></div>
+            </div>
+            <div class="skill-item" data-skill="Responsive">
+              <div class="skill-icon">&#x2750;</div>
+              <span>Responsive Design</span>
+              <div class="skill-bar"><div class="skill-fill" style="--w:92%"></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="skill-category reveal">
+          <h3 class="skill-cat-title">Tools</h3>
+          <div class="skill-list">
+            <div class="skill-item" data-skill="Git">
+              <div class="skill-icon">&#x2387;</div>
+              <span>Git</span>
+              <div class="skill-bar"><div class="skill-fill" style="--w:78%"></div></div>
+            </div>
+            <div class="skill-item" data-skill="GitHub">
+              <div class="skill-icon">&#x2767;</div>
+              <span>GitHub</span>
+              <div class="skill-bar"><div class="skill-fill" style="--w:80%"></div></div>
+            </div>
+            <div class="skill-item" data-skill="VS Code">
+              <div class="skill-icon">&#x276f;</div>
+              <span>VS Code</span>
+              <div class="skill-bar"><div class="skill-fill" style="--w:88%"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section class="section projects" id="projects">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">03 / Projects</span>
+        <h2 class="section-title">Selected<br /><em>Work</em></h2>
+      </div>
+      <div class="projects-grid">
+
+        <!-- Project 1 -->
+        <article class="project-card reveal">
+          <div class="project-img">
+            <div class="project-img-placeholder p1">
+              <span>&#x1F4CA;</span>
+              <p>Study Dashboard</p>
+            </div>
+            <div class="project-overlay">
+              <a href="https://smartstudy-dashboard.netlify.app/" target="_blank" class="overlay-btn">Live &#x2197;</a>
+              <a href="https://github.com/japhet996sunday-cell/smartstudy-dashboard" target="_blank" class="overlay-btn">Code &#x7b;&#x7d;</a>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="project-num">01</span>
+            <h3>Smart Study Dashboard</h3>
+            <p>A productivity dashboard for students to track study goals, organize subjects, and monitor progress — with clean UI and local data persistence.</p>
+            <div class="project-stack">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span>
+            </div>
+            <div class="project-links">
+              <a href="https://smartstudy-dashboard.netlify.app/" target="_blank" class="btn btn-gold btn-sm">Live Demo</a>
+              <a href="https://github.com/japhet996sunday-cell/smartstudy-dashboard" target="_blank" class="btn btn-outline btn-sm">View Code</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="project-card reveal">
+          <div class="project-img">
+            <div class="project-img-placeholder p2">
+              <span>&#x1F916;</span>
+              <p>AI Chat App</p>
+            </div>
+            <div class="project-overlay">
+              <a href="https://novachat-live.netlify.app/" target="_blank" class="overlay-btn">Live &#x2197;</a>
+              <a href="https://github.com/japhet996sunday-cell/Novachat-ai" target="_blank" class="overlay-btn">Code &#x7b;&#x7d;</a>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="project-num">02</span>
+            <h3>NovaChatAI App</h3>
+            <p>An AI-powered chat application integrating the OpenRouter API (Mistral 7B Instruct). Features dark/light theme, markdown rendering, chat persistence, and a responsive sidebar.</p>
+            <div class="project-stack">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span><span>API</span>
+            </div>
+            <div class="project-links">
+              <a href="https://novachat-live.netlify.app/" target="_blank" class="btn btn-gold btn-sm">Live Demo</a>
+              <a href="https://github.com/japhet996sunday-cell/Novachat-ai" target="_blank" class="btn btn-outline btn-sm">View Code</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="project-card reveal">
+          <div class="project-img">
+            <div class="project-img-placeholder p3">
+              <span>&#x1F9EE;</span>
+              <p>Calculator App</p>
+            </div>
+            <div class="project-overlay">
+              <a href="https://japhet996sunday-cell.github.io/phone-scientific-calculator-/" target="_blank" class="overlay-btn">Live &#x2197;</a>
+              <a href="https://github.com/japhet996sunday-cell/phone-scientific-calculator-" target="_blank" class="overlay-btn">Code &#x7b;&#x7d;</a>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="project-num">03</span>
+            <h3>Scientific Calculator App</h3>
+            <p>A fully functional scientific calculator with trigonometric, logarithmic, and advanced math operations. Optimized for mobile with a clean phone-style layout.</p>
+            <div class="project-stack">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span>
+            </div>
+            <div class="project-links">
+              <a href="https://japhet996sunday-cell.github.io/phone-scientific-calculator-/" target="_blank" class="btn btn-gold btn-sm">Live Demo</a>
+              <a href="https://github.com/japhet996sunday-cell/phone-scientific-calculator-" target="_blank" class="btn btn-outline btn-sm">View Code</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICES ===== -->
+  <section class="section services" id="services">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">04 / Services</span>
+        <h2 class="section-title">What I<br /><em>Offer</em></h2>
+      </div>
+      <div class="services-grid">
+        <div class="service-card reveal">
+          <div class="service-icon">&#x2728;</div>
+          <h3>Frontend Development</h3>
+          <p>Building responsive, performant websites using clean semantic HTML, modern CSS, and vanilla JavaScript — no bloat, just quality.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon">&#x1F527;</div>
+          <h3>Website Maintenance</h3>
+          <p>Updating, fixing, and improving existing websites to ensure they stay functional, fast, and visually up-to-date.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon">&#x1F4C4;</div>
+          <h3>Landing Pages</h3>
+          <p>Creating modern, conversion-focused business landing pages with compelling layouts and smooth user experience.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon">&#x1F4F1;</div>
+          <h3>Responsive Design</h3>
+          <p>Ensuring every site looks and works perfectly across all screen sizes — mobile, tablet, and desktop.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALS ===== -->
+  <section class="section testimonials" id="testimonials">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">05 / Testimonials</span>
+        <h2 class="section-title">What They<br /><em>Say</em></h2>
+      </div>
+      <div class="testimonial-wrapper reveal">
+        <div class="testimonial-card">
+          <div class="quote-mark">&#x201C;</div>
+          <p class="testimonial-text">Japhet Sunday successfully completed the Web Development program at Darl Creative Hub Academy. He demonstrated strong digital literacy, problem-solving skills, and commitment to learning.</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">BM</div>
+            <div class="author-info">
+              <strong>Blessing Moses</strong>
+              <span>Administrative Director — Darl Creative Hub Academy</span>
+            </div>
+          </div>
+          <a href="reference-letter.pdf"
+   class="btn btn-outline ref-btn"
+   target="_blank">
+   View Reference Letter (PDF)
+</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">06 / Contact</span>
+        <h2 class="section-title">Let's Work<br /><em>Together</em></h2>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            </div>
+            <div>
+              <span class="ci-label">Email</span>
+              <a href="mailto:japhet996sunday@gmail.com">japhet996sunday@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+            </div>
+            <div>
+              <span class="ci-label">Phone</span>
+              <a href="tel:09070065083">09070065083 / 08057199024</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            </div>
+            <div>
+              <span class="ci-label">Location</span>
+              <span>Abuja, Nigeria</span>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.165 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.604-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.004.07 1.532 1.031 1.532 1.031.892 1.529 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.268 2.75 1.026A9.578 9.578 0 0112 6.836a9.59 9.59 0 012.504.337c1.909-1.294 2.748-1.026 2.748-1.026.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.337 4.687-4.565 4.935.359.309.678.919.678 1.852 0 1.337-.012 2.415-.012 2.741 0 .267.18.579.688.481C19.138 20.161 22 16.416 22 12c0-5.523-4.477-10-10-10z"/></svg>
+            </div>
+            <div>
+              <span class="ci-label">GitHub</span>
+              <a href="https://github.com/japhet996sunday-cell" target="_blank">github.com/japhet996sunday-cell</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon whatsapp-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </div>
+            <div>
+              <span class="ci-label">WhatsApp</span>
+              <a href="https://wa.me/2349070065083" target="_blank">+234 907 006 5083</a>
+            </div>
+          </div>
+        </div>
+        <form class="contact-form reveal" id="contactForm" novalidate>
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="John Doe" />
+            <span class="form-error" id="nameError"></span>
+          </div>
+          <div class="form-group">
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" placeholder="john@example.com" />
+            <span class="form-error" id="emailError"></span>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..."></textarea>
+            <span class="form-error" id="messageError"></span>
+          </div>
+          <button type="submit" class="btn btn-gold form-submit">Send Message &#x2192;</button>
+          <div class="form-success" id="formSuccess">✔ Message sent! I'll get back to you soon.</div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <span class="footer-logo">JS<span class="gold">.</span></span>
+        <p>Japhet Sunday — Frontend Developer</p>
+      </div>
+      <div class="footer-social">
+        <a href="https://github.com/japhet996sunday-cell" target="_blank" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.165 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.604-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.004.07 1.532 1.031 1.532 1.031.892 1.529 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.268 2.75 1.026A9.578 9.578 0 0112 6.836a9.59 9.59 0 012.504.337c1.909-1.294 2.748-1.026 2.748-1.026.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.337 4.687-4.565 4.935.359.309.678.919.678 1.852 0 1.337-.012 2.415-.012 2.741 0 .267.18.579.688.481C19.138 20.161 22 16.416 22 12c0-5.523-4.477-10-10-10z"/></svg>
+        </a>
+        <a href="mailto:japhet996sunday@gmail.com" aria-label="Email">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        </a>
+        <a href="https://wa.me/2349070065083" target="_blank" aria-label="WhatsApp">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        </a>
+      </div>
+      <p class="footer-copy">&copy; <span id="year"></span> Japhet Sunday. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- ===== BACK TO TOP ===== -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">&#x2191;</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
